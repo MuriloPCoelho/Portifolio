@@ -59,7 +59,6 @@ modalTaskTitle.addEventListener("keypress", (keyPressed) => {
 
 //enable to press enter on modal description to ad a task
 modalTaskDescription.addEventListener("keypress", (keyPressed) => {
-    console.log(keyPressed.key)
     if (keyPressed.key === "Enter") {
         modalAddTask()
     }
