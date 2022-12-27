@@ -1,0 +1,25 @@
+#O {
+    position: relative;
+}
+
+#O-form__1, #O-form__2 {
+    border-radius: 100%;  
+    position: absolute;
+
+}
+
+#O-form__1 {
+    background-color: var(--oColor);
+    height: 160px;
+    right: -80px;
+    top: -80px;
+    width: 160px;
+}
+
+#O-form__2 {
+    background-color: var(--backgrond);
+    height: 130px;
+    right: -65px;
+    top: -65px;
+    width: 130px;
+}

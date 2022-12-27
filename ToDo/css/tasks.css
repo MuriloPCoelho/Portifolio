@@ -1,0 +1,240 @@
+#tasksArea {
+    padding: 30px 50px;
+}
+
+#tasksArea.light {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+#tasksArea.dark {
+    background-color: var(--taskArea-dark);
+    color: var(--white);
+}
+
+.pageTop {
+    position: relative;
+}
+
+.pageTitle {
+    margin-bottom: 30px;
+}
+
+#selectText {
+    font-size: 14px;
+}
+
+.selectFilter {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#selectOrder {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 5px 5px 5px 0;
+    border-radius: 6px;
+}
+
+#selectOrder.light {
+    color: var(--black);
+}
+
+#selectOrder.light:hover{
+    background-color: var(--grey);
+    cursor: pointer;
+}
+
+#selectOrder.dark {
+    color: var(--white);
+}
+
+#selectOrder.dark:hover{
+    background-color: var(--light-black);
+    cursor: pointer;
+}
+
+#selectOrder > option {
+    color: var(--black);
+    background-color: white;
+}
+
+.task {
+    padding: 10px;
+    position: relative;
+}
+
+.task.light {
+    border-top: 1px solid var(--light-grey);
+}
+
+.task.dark {
+    border-top: 1px solid var(--light-black);
+}
+
+.taskArea {
+    display: grid;
+    grid-template-columns: 26px auto;
+}
+
+.taskTitle, .editTitle {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.descriptionArea {
+    font-size: 13px;
+    color: var(--grey2);
+    display: flex;
+    justify-content: space-between;
+}
+
+.taskOptions {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: none;
+}
+
+.deleteButton {
+    margin-left: 5px;
+} 
+
+.editButton ,.deleteButton {
+    cursor: pointer;
+    opacity: 60%;
+}
+
+.editButton:hover , .deleteButton:hover {
+    opacity: 100%;
+}
+
+.task:hover .taskOptions{
+    display: block;
+}
+
+.checkbox {
+    width: 18px;
+    height: 18px;
+    border-radius: 100%;
+    border: 1px solid var(--grey2);
+    cursor: pointer;
+    grid-row: span 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkbox:hover .checkIcon, .checkbox:active .checkIcon {
+    opacity: 100%;
+    transition: 0.25s;
+}
+
+.checkbox.light:active {
+    background-color: var(--light-grey);
+}
+
+.checkbox.dark:active {
+    background-color: var(--light-black);
+}
+
+.checkIcon {
+    opacity: 0%;
+    width: 12px;
+    height: 12px;
+}
+
+.editArea {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--grey2);
+    border-radius: 12px;
+    padding: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.editDescription {
+    font-size: 13px;
+}
+
+.editTitle, .editDescription {
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.editTitle.light, .editDescription.light {
+    color: var(--black);
+}
+
+.editTitle.dark, .editDescription.dark {
+    color: var(--white);
+}
+
+.editDescription {
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.editButtonsArea {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.editButtonsArea button {
+    align-items: center;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    font-weight: 700;
+    padding: 8px;
+    transition: 0.1s;
+}
+
+.editButtonsArea button:active {
+    padding: 6px;
+}
+
+.editCancelButton.light {
+    background-color: var(--light-grey);
+    color: var(--black);
+}
+
+.editCancelButton.dark {
+    background-color: var(--light-black);
+    color: var(--white);
+}
+
+.editSaveButton {
+    background-color: var(--light-purple);
+    color: var(--white);
+}
+
+.finished {
+    animation-duration: 0.25s;
+    border-radius: 8px;
+    animation-fill-mode: forwards;
+    transition: 0.25s;
+    background-color: var(--offwhite);
+}
+
+.finished .descriptionArea,.finished .taskTitle{
+    text-decoration: line-through;
+}
+
+@keyframes finishingTask {
+    from {
+        opacity: 100%;
+    }
+
+    to {
+        opacity: 0%
+    }
+}

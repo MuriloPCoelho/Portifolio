@@ -1,0 +1,19 @@
+#X {
+    position: relative;
+}
+
+#X-form__1, #X-form__2 {
+    background-color: var(--xColor);
+    height: 14px;
+    position: absolute;
+    right: -100px;
+    width: 200px;
+}
+
+#X-form__1 {
+    rotate: 45deg;
+}
+
+#X-form__2 {
+    rotate: -45deg;
+}

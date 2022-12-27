@@ -1,0 +1,143 @@
+.modal {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    display: none;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    padding-top: 100px;
+}
+
+.openModal {
+    display: block;
+}
+
+.modalContent {
+    animation-duration: 0.2s;
+    animation-timing-function: ease-in;
+    border-radius: 12px;
+    box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.25); 
+    display: grid;
+    grid-template-rows: 25px auto 25px;
+    height: 200px;
+    margin: auto;
+    padding: 20px;
+    row-gap: 20px;
+    width: 500px;
+}
+
+.modalContent.light {
+    background-color: white;
+}
+
+.modalContent.dark {
+    background-color: var(--modal-dark);
+}
+
+.openModalContent {
+    animation-name: modalAnimationOpen;
+}
+
+.closeModalContent {
+    animation-name: modalAnimationClose;
+}
+
+#modalTaskTitle, #modalTaskDescription {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+#modalTaskTitle.light, #modalTaskDescription.light {
+    color: var(--black);
+}
+
+#modalTaskTitle.dark, #modalTaskDescription.dark {
+    color: var(--white);
+}
+
+#modalTaskTitle {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+#modalTaskDescription {
+    font-size: 1.2em;
+}
+
+#modalTaskDescription::placeholder,  #modalTaskTitle::placeholder{
+    opacity: 60%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#modalButtonsArea {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+#modalButtonsArea button {
+    align-items: center;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    font-weight: 700;
+    padding: 10px;
+    transition: 0.1s;
+}
+
+#modalButtonsArea button:active {
+    padding: 8px;
+}
+
+.modalCancelButton.light {
+    background-color: var(--offwhite);
+    color: var(--black);
+}
+
+.modalCancelButton.dark {
+    background-color: var(--light-black);
+    color: var(--offwhite);
+}
+
+.modalAddButton {
+    background-color: var(--light-purple);
+    color: var(--offwhite);
+}
+
+.buttonDisabled {
+    opacity: 50%;
+}
+
+@keyframes modalAnimationOpen {
+    from {
+        height: 0px;
+        width: 0px;
+        opacity: 0%;
+    }
+
+    to {
+        height: 200px;
+        width: 500px;
+        opacity: 100%;
+    }
+}
+
+@keyframes modalAnimationClose {
+    from {
+        width: 500px;
+        height: 200px;
+        opacity: 100%;
+    }
+
+    to {
+        width: 0px;
+        height: 0px;
+        opacity: 0%;
+    }
+}
