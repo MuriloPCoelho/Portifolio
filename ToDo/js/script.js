@@ -73,8 +73,6 @@ function modalAddTask() {
     }
 }
 
-
-
 //theme button animation
 themeButton.addEventListener("click", (e) => {
     changeTheme()
@@ -145,7 +143,7 @@ function addTask(title, description, identifier, theme) {
     })
 
     const checkIcon = buildHTML("img", "checkIcon", checkBox)
-    checkIcon.src = "../img/check.svg"
+    checkIcon.src = "img/check.svg"
 
     const taskTitle = buildHTML("h3", "taskTitle", taskArea)
     taskTitle.innerHTML = title
@@ -166,7 +164,7 @@ function addTask(title, description, identifier, theme) {
     })
 
     const editIcon = buildHTML("img", "editIcon", editButton)
-    editIcon.src = `../img/edit-${theme}.svg`
+    editIcon.src = `img/edit-${theme}.svg`
 
     const deleteButton = buildHTML("span", "deleteButton", taskOptions)
     deleteButton.addEventListener("click", (e) => {
@@ -174,7 +172,7 @@ function addTask(title, description, identifier, theme) {
     })
 
     const deleteIcon = buildHTML("img", "deleteIcon", deleteButton)
-    deleteIcon.src = `../img/delete-${theme}.svg`
+    deleteIcon.src = `img/delete-${theme}.svg`
 
     const editArea = buildHTML("div", "editArea hidden", listItem)
 
