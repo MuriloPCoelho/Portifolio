@@ -6,7 +6,6 @@ const modalTaskTitle = document.querySelector("#modalTaskTitle")
 const modalTaskDescription = document.querySelector("#modalTaskDescription")
 const modalCancelButton = document.querySelector(".modalCancelButton")
 const modalAddTaskButton = document.querySelector(".modalAddButton")
-modalAddTaskButton.onclick = modalAddTask()
 const themeButton = document.querySelector("#changeTheme")
 const list = document.querySelector("#taskList")
 let currentTheme = "light"
@@ -48,6 +47,10 @@ modalTaskTitle.addEventListener("keyup", (e) =>{
 //close modal
 modalCancelButton.addEventListener("click", (e) => {
     closeModal()
+})
+
+modalAddTaskButton.addEventListener("click", (e) => {
+    modalAddTask()
 })
 
 //enable to press enter on modal title to ad a task

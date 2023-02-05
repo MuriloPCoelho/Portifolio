@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <main>
+        <h2 class="columnsTitle">To Do</h2>
+        <h2 class="columnsTitle">In Progress</h2>
+        <h2 class="columnsTitle">Done</h2>
+        <div id="toDo" class="column">
+            <div class="task" draggable="true">CU</div>
+            <div class="task" draggable="true">Passar Roupa</div>
+            <div class="addTaskButton" draggable="false">
+                <img class="addTaskIcon" src="img/addIcon.svg" alt="" draggable="false">
+                <p class="addTaskText">Add task</p>
+            </div>
+            <div class="addTaskArea disabled">
+                <input class="taskInput" type="text" placeholder="Task Name">
+                <button class="addTaskAreaButton">Add</button>
+            </div>              
+        </div>
+        <div id="inProgress" class="column">
+            <div class="task" draggable="true">E</div>
+            <div class="addTaskButton" draggable="false">
+                <img class="addTaskIcon" src="img/addIcon.svg" alt="" draggable="false">
+                <p class="addTaskText">Add task</p>
+            </div>
+            <div class="addTaskArea disabled">
+                <input class="taskInput" type="text" placeholder="Task Name">
+                <button class="addTaskAreaButton">Add</button>
+            </div>
+        </div>
+        <div id="done" class="column">
+            <div class="task" draggable="true">LHO</div>
+            <div class="addTaskButton" draggable="false">
+                <img class="addTaskIcon" src="img/addIcon.svg" alt="" draggable="false">
+                <p class="addTaskText">Add task</p>
+            </div>
+            <div class="addTaskArea disabled">
+                <input class="taskInput" type="text" placeholder="Task Name">
+                <button class="addTaskAreaButton">Add</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
