@@ -14,8 +14,6 @@
         <h2 class="columnsTitle">In Progress</h2>
         <h2 class="columnsTitle">Done</h2>
         <div id="toDo" class="column">
-            <div class="task" draggable="true">CU</div>
-            <div class="task" draggable="true">Passar Roupa</div>
             <div class="addTaskButton" draggable="false">
                 <img class="addTaskIcon" src="img/addIcon.svg" alt="" draggable="false">
                 <p class="addTaskText">Add task</p>
@@ -23,10 +21,21 @@
             <div class="addTaskArea disabled">
                 <input class="taskInput" type="text" placeholder="Task Name">
                 <button class="addTaskAreaButton">Add</button>
+                <img class="closeTaskAreaButton" src="img/closeIcon.svg" alt="">
             </div>              
         </div>
         <div id="inProgress" class="column">
-            <div class="task" draggable="true">E</div>
+            <div class="task">
+                <div class="disabled taskText">Oia</div>
+                <div class="editArea">
+                    <input class="editTaskInput" type="text">
+                    <button class="editTaskButton">Save</button>
+                </div>
+                <div class="disabled options">
+                    <img class="icon editIcon" src="img/edit.svg" alt="">
+                    <img class="icon deleteIcon" src="img/delete.svg" alt="">
+                </div>
+            </div>
             <div class="addTaskButton" draggable="false">
                 <img class="addTaskIcon" src="img/addIcon.svg" alt="" draggable="false">
                 <p class="addTaskText">Add task</p>
@@ -34,10 +43,10 @@
             <div class="addTaskArea disabled">
                 <input class="taskInput" type="text" placeholder="Task Name">
                 <button class="addTaskAreaButton">Add</button>
+                <img class="closeTaskAreaButton" src="img/closeIcon.svg" alt="">
             </div>
         </div>
         <div id="done" class="column">
-            <div class="task" draggable="true">LHO</div>
             <div class="addTaskButton" draggable="false">
                 <img class="addTaskIcon" src="img/addIcon.svg" alt="" draggable="false">
                 <p class="addTaskText">Add task</p>
@@ -45,6 +54,7 @@
             <div class="addTaskArea disabled">
                 <input class="taskInput" type="text" placeholder="Task Name">
                 <button class="addTaskAreaButton">Add</button>
+                <img class="closeTaskAreaButton" src="img/closeIcon.svg" alt="">
             </div>
         </div>
     </main>
