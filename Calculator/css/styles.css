@@ -20,7 +20,8 @@ body {
     display: flex;
     flex-direction: column;
     padding: .5em;
-    width: 400px;
+    max-width: 400px;
+    width: 100%;
 }
 
 #calc h3 {
@@ -46,6 +47,7 @@ body {
 #current-operation {
     font-size: 3em;
     font-weight: 3em;
+    text-align: right;
 }
 
 #buttons-container {
@@ -60,7 +62,9 @@ body {
     border-radius: 7.5px;
     cursor: pointer;
     font-size: 1.2em;
-    height: 4em;
+    max-height: 4em; 
+    width: 100%;
+    aspect-ratio: 1;
 }
 
 #buttons-container button:hover {
@@ -85,4 +89,10 @@ body {
 
 #buttons-container :hover {
     transition: 0.25s;
+}
+
+@media (max-width: 360px) {
+    #current-operation {
+        font-size: 2rem;
+    }
 }
