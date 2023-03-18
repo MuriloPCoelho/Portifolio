@@ -2,6 +2,9 @@ const score = document.querySelectorAll("div.score")
 let spaces = document.querySelectorAll("div.space")
 const turnText = document.querySelector("div#turn")
 const reset = document.querySelector("div#reset")
+const OplayerPoints = document.querySelector(".scoreO .score-points")
+const XplayerPoints = document.querySelector(".scoreX .score-points")
+
 let turn = 1
 updateTurnIndicator(turn)
 let xMoves = []
@@ -105,7 +108,7 @@ function verifyMoves (movesList, turn) {
             setTimeout(() => {alert(`O jogador ${currentTurn} ganhou!`)}, 100)
             spaces = ""
             ended = true
-            console.log('oi')
+            updateScorePoints(currentTurn)
         }
                
         i++
@@ -126,3 +129,14 @@ reset.addEventListener("click", (e) => {
      xMoves = []
      oMoves = []
 })
+
+console.log(OplayerPoints.innerHTML)
+
+function updateScorePoints(winner) {
+    if (winner === "X") {
+        XplayerPoints.innerHTML = XplayerPoints.innerHTML === "-" ? 1 : Number(XplayerPoints.innerHTML) + 1
+    } else if (winner === "O") {
+        OplayerPoints.innerHTML = OplayerPoints.innerHTML === "-" ? 1 : Number(OplayerPoints.innerHTML) + 1
+    }
+    
+}
