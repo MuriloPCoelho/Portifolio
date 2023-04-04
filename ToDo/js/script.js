@@ -102,11 +102,11 @@ function changeIcons(theme) {
     const deleteIcons = document.querySelectorAll(".deleteIcon")
 
     editIcons.forEach((icon) => {
-        icon.src = `../img/edit-${theme}.svg`
+        icon.src = `./img/edit-${theme}.svg`
     })
 
     deleteIcons.forEach((icon) => {
-        icon.src = `../img/delete-${theme}.svg`
+        icon.src = `./img/delete-${theme}.svg`
     })
     
 }

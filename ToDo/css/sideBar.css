@@ -17,9 +17,13 @@
 .sideBarList-item {
     padding: 6px 8px;
     border-radius: 5px;
-    display: flex;
     transition: 0.05s;
+}
+
+.sideBarList-item a {
     text-decoration: none;
+    display: flex;
+    gap: 5px;
 }
 
 .sideBarList.light>.sideBarList-item:hover, .sideBarList.light>.sideBarList-item.active{
@@ -34,14 +38,20 @@
     cursor: pointer;
 }
 
-.sideBarList.light > .sideBarList-item {
+.sideBarList.light > .sideBarList-item a{
     color: var(--black);
 }
 
-.sideBarList.dark > .sideBarList-item {
+.sideBarList.dark > .sideBarList-item a{
     color: var(--offwhite);
 }
 
 .textLink {
     padding-left: 5px;
+}
+
+@media (max-width: 768px) {
+    #sideBar {
+        display: none;
+    }
 }

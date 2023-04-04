@@ -1,7 +1,7 @@
 #header {
     align-items: center;
     display: grid;
-    grid-template-columns: minmax(250px, 1fr) 5fr;;
+    grid-template-columns: minmax(250px, 1fr) 5fr;
     grid-column: span 2;
 }
 
@@ -41,7 +41,6 @@
     border-radius: 6px;
     color: white;
     cursor: pointer;
-    margin-right: 100px;
     transition: 0.15s;
     width:16px;
     outline: none;
@@ -90,4 +89,8 @@
 }
 
 
-
+@media (max-width: 768px) {
+    #header {
+        grid-template-columns:auto 1fr;
+    }
+}
